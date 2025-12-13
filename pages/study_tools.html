@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="أدوات الدراسة - مجموعة شاملة من الأدوات الأكاديمية للتحقق من الواجبات وفحص المفاهيم الرياضية">
+    <title>Math Companion Pro - أدوات الدراسة</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script type="module" async src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fmathcompa3433back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.11"></script>
+  <script type="module" defer src="https://static.rocket.new/rocket-shot.js?v=0.0.1"></script>
+  </head>
+<body class="bg-background text-text-primary">
+    <!-- Navigation Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-surface/30">
+        <nav class="container-custom">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3 space-x-reverse">
+                    <svg class="w-10 h-10" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="40" height="40" rx="8" fill="url(#logo-gradient)"/>
+                        <text x="20" y="28" font-family="Inter, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC" text-anchor="middle">AG</text>
+                        <defs>
+                            <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#3B82F6"/>
+                                <stop offset="1" stop-color="#2563EB"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <div>
+                        <h1 class="text-xl font-headline font-bold text-text-primary">Math Companion Pro</h1>
+                        <p class="text-xs text-text-muted">أدوات احترافية للطلاب الجادين</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8 space-x-reverse">
+                    <a href="homepage.html" class="text-text-secondary hover:text-accent transition-colors duration-300">الرئيسية</a>
+                    <a href="complex_numbers.html" class="text-text-secondary hover:text-accent transition-colors duration-300">الأعداد المركبة</a>
+                    <a href="professional_insights.html" class="text-text-secondary hover:text-accent transition-colors duration-300">رؤى مهنية</a>
+                    <a href="physics_integration.html" class="text-text-secondary hover:text-accent transition-colors duration-300">الفيزياء</a>
+                    <a href="study_tools.html" class="text-accent font-semibold transition-colors duration-300">أدوات الدراسة</a>
+                    <a href="about.html" class="text-text-secondary hover:text-accent transition-colors duration-300">حول</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-surface/20 transition-colors duration-300" aria-label="فتح القائمة">
+                    <svg class="w-6 h-6 text-text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4 space-y-2">
+                <a href="homepage.html" class="block px-4 py-2 text-text-secondary hover:text-accent hover:bg-surface/20 rounded-lg transition-colors duration-300">الرئيسية</a>
+                <a href="complex_numbers.html" class="block px-4 py-2 text-text-secondary hover:text-accent hover:bg-surface/20 rounded-lg transition-colors duration-300">الأعداد المركبة</a>
+                <a href="professional_insights.html" class="block px-4 py-2 text-text-secondary hover:text-accent hover:bg-surface/20 rounded-lg transition-colors duration-300">رؤى مهنية</a>
+                <a href="physics_integration.html" class="block px-4 py-2 text-text-secondary hover:text-accent hover:bg-surface/20 rounded-lg transition-colors duration-300">الفيزياء</a>
+                <a href="study_tools.html" class="block px-4 py-2 text-accent font-semibold rounded-lg bg-accent/10">أدوات الدراسة</a>
+                <a href="about.html" class="block px-4 py-2 text-text-secondary hover:text-accent hover:bg-surface/20 rounded-lg transition-colors duration-300">حول</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
+            <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-width="1"/>
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#grid)"/>
+            </svg>
+        </div>
+        
+        <div class="container-custom relative">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="inline-flex items-center px-4 py-2 bg-accent/10 border border-accent/30 rounded-full mb-6">
+                    <svg class="w-5 h-5 text-accent ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+                    </svg>
+                    <span class="text-accent font-semibold">أدوات التحقق والدعم الأكاديمي</span>
+                </div>
+
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-headline font-bold mb-6 leading-tight">
+                    <span class="gradient-text">أدوات الدراسة</span><br/>
+                    الاحترافية
+                </h1>
+
+                <p class="text-xl md:text-2xl text-text-secondary mb-8 leading-relaxed max-w-3xl mx-auto">
+                    مجموعة شاملة من الأدوات العملية للتحقق من الواجبات المنزلية، فحص المفاهيم، والدعم الأكاديمي المستمر
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
+                    <div class="card p-6 text-center">
+                        <div class="text-4xl font-bold text-accent mb-2">12+</div>
+                        <div class="text-text-secondary">أداة متاحة</div>
+                    </div>
+                    <div class="card p-6 text-center">
+                        <div class="text-4xl font-bold text-success mb-2">24/7</div>
+                        <div class="text-text-secondary">وصول دائم</div>
+                    </div>
+                    <div class="card p-6 text-center">
+                        <div class="text-4xl font-bold text-warning mb-2">100%</div>
+                        <div class="text-text-secondary">مجاني</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Access Tools Section -->
+    <section class="section bg-background-light">
+        <div class="container-custom">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-headline font-bold mb-4">أدوات الوصول السريع</h2>
+                <p class="text-xl text-text-secondary max-w-2xl mx-auto">
+                    أدوات أساسية متاحة دائماً لدعم رحلتك التعليمية
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Scientific Calculator -->
+                <div class="card card-hover p-8 group">
+                    <div class="w-16 h-16 bg-accent/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors duration-300">
+                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-headline font-semibold mb-3">آلة حاسبة علمية</h3>
+                    <p class="text-text-secondary mb-6 leading-relaxed">
+                        حاسبة متقدمة تدعم العمليات المعقدة، الدوال المثلثية، اللوغاريتمات والأعداد المركبة
+                    </p>
+                    <button onclick="openCalculator()" class="text-accent font-semibold hover:text-accent-400 transition-colors duration-300 flex items-center">
+                        <span>فتح الآلة الحاسبة</span>
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Formula Reference -->
+                <div class="card card-hover p-8 group">
+                    <div class="w-16 h-16 bg-success/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-success/20 transition-colors duration-300">
+                        <svg class="w-8 h-8 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-headline font-semibold mb-3">مرجع الصيغ</h3>
+                    <p class="text-text-secondary mb-6 leading-relaxed">
+                        مكتبة شاملة لجميع الصيغ الرياضية الأساسية مع أمثلة تطبيقية وشروحات مفصلة
+                    </p>
+                    <button onclick="openFormulaReference()" class="text-success font-semibold hover:text-success-400 transition-colors duration-300 flex items-center">
+                        <span>تصفح الصيغ</span>
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Proof Checker -->
+                <div class="card card-hover p-8 group">
+                    <div class="w-16 h-16 bg-warning/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-warning/20 transition-colors duration-300">
+                        <svg class="w-8 h-8 text-warning" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-headline font-semibold mb-3">فاحص البراهين</h3>
+                    <p class="text-text-secondary mb-6 leading-relaxed">
+                        أداة ذكية للتحقق من صحة البراهين الرياضية وتحديد الأخطاء المنطقية المحتملة
+                    </p>
+                    <button onclick="openProofChecker()" class="text-warning font-semibold hover:text-warning-400 transition-colors duration-300 flex items-center">
+                        <span>فحص البرهان</span>
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Unit Converter -->
+                <div class="card card-hover p-8 group">
+                    <div class="w-16 h-16 bg-accent/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors duration-300">
+                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-headline font-semibold mb-3">محول الوحدات</h3>
+                    <p class="text-text-secondary mb-6 leading-relaxed">
+                        تحويل سريع ودقيق بين مختلف وحدات القياس الفيزيائية والرياضية
+                    </p>
+                    <button onclick="openUnitConverter()" class="text-accent font-semibold hover:text-accent-400 transition-colors duration-300 flex items-center">
+                        <span>فتح المحول</span>
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Graphing Tool -->
+                <div class="card card-hover p-8 group">
+                    <div class="w-16 h-16 bg-success/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-success/20 transition-colors duration-300">
+                        <svg class="w-8 h-8 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-headline font-semibold mb-3">أداة الرسم البياني</h3>
+                    <p class="text-text-secondary mb-6 leading-relaxed">
+                        رسم الدوال والمعادلات الرياضية بشكل تفاعلي مع إمكانية التحليل والتكبير
+                    </p>
+                    <button onclick="openGraphingTool()" class="text-success font-semibold hover:text-success-400 transition-colors duration-300 flex items-center">
+                        <span>فتح الأداة</span>
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Study Timer -->
+                <div class="card card-hover p-8 group">
+                    <div class="w-16 h-16 bg-warning/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-warning/20 transition-colors duration-300">
+                        <svg class="w-8 h-8 text-warning" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-headline font-semibold mb-3">مؤقت الدراسة</h3>
+                    <p class="text-text-secondary mb-6 leading-relaxed">
+                        نظام بومودورو للدراسة الفعالة مع تذكيرات للاستراحة وتتبع الإنتاجية
+                    </p>
+                    <button onclick="openStudyTimer()" class="text-warning font-semibold hover:text-warning-400 transition-colors duration-300 flex items-center">
+                        <span>بدء المؤقت</span>
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Downloadable Resources Section -->
+    <section class="section">
+        <div class="container-custom">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-headline font-bold mb-4">الموارد القابلة للتنزيل</h2>
+                <p class="text-xl text-text-secondary max-w-2xl mx-auto">
+                    مراجع وأوراق عمل احترافية متاحة للاستخدام دون اتصال بالإنترنت
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Formula Sheets -->
+                <div class="card p-8">
+                    <div class="flex items-start space-x-4 space-x-reverse mb-6">
+                        <div class="flex-shrink-0 w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center">
+                            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                            </svg>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-semibold mb-2">أوراق الصيغ الرياضية</h3>
+                            <p class="text-text-secondary mb-4">مجموعة شاملة من الصيغ الأساسية لجميع الوحدات الدراسية</p>
+                            <div class="space-y-2">
+                                <button onclick="downloadResource('complex-numbers-formulas')" class="w-full text-right px-4 py-3 bg-background-light hover:bg-surface/20 rounded-lg transition-colors duration-300 flex items-center justify-between">
+                                    <span class="text-text-primary">صيغ الأعداد المركبة</span>
+                                    <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                                    </svg>
+                                </button>
+                                <button onclick="downloadResource('trigonometry-formulas')" class="w-full text-right px-4 py-3 bg-background-light hover:bg-surface/20 rounded-lg transition-colors duration-300 flex items-center justify-between">
+                                    <span class="text-text-primary">صيغ المثلثات</span>
+                                    <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                                    </svg>
+                                </button>
+                                <button onclick="downloadResource('calculus-formulas')" class="w-full text-right px-4 py-3 bg-background-light hover:bg-surface/20 rounded-lg transition-colors duration-300 flex items-center justify-between">
+                                    <span class="text-text-primary">صيغ التفاضل والتكامل</span>
+                                    <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Practice Worksheets -->
+                <div class="card p-8">
+                    <div class="flex items-start space-x-4 space-x-reverse mb-6">
+                        <div class="flex-shrink-0 w-12 h-12 bg-success/10 rounded-lg flex items-center justify-center">
+                            <svg class="w-6 h-6 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
+                            </svg>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-semibold mb-2">أوراق العمل التدريبية</h3>
+                            <p class="text-text-secondary mb-4">تمارين متدرجة الصعوبة مع الحلول التفصيلية</p>
+                            <div class="space-y-2">
+                                <button onclick="downloadResource('complex-numbers-worksheet')" class="w-full text-right px-4 py-3 bg-background-light hover:bg-surface/20 rounded-lg transition-colors duration-300 flex items-center justify-between">
+                                    <span class="text-text-primary">تمارين الأعداد المركبة</span>
+                                    <svg class="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                                    </svg>
+                                </button>
+                                <button onclick="downloadResource('functions-worksheet')" class="w-full text-right px-4 py-3 bg-background-light hover:bg-surface/20 rounded-lg transition-colors duration-300 flex items-center justify-between">
+                                    <span class="text-text-primary">تمارين الدوال</span>
+                                    <svg class="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                                    </svg>
+                                </button>
+                                <button onclick="downloadResource('sequences-worksheet')" class="w-full text-right px-4 py-3 bg-background-light hover:bg-surface/20 rounded-lg transition-colors duration-300 flex items-center justify-between">
+                                    <span class="text-text-primary">تمارين المتتاليات</span>
+                                    <svg class="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Study Guides -->
+                <div class="card p-8">
+                    <div class="flex items-start space-x-4 space-x-reverse mb-6">
+                        <div class="flex-shrink-0 w-12 h-12 bg-warning/10 rounded-lg flex items-center justify-center">
+                            <svg class="w-6 h-6 text-warning" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                            </svg>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-semibold mb-2">أدلة الدراسة</h3>
+                            <p class="text-text-secondary mb-4">ملخصات شاملة واستراتيجيات حل المسائل</p>
+                            <div class="space-y-2">
+                                <button onclick="downloadResource('exam-preparation-guide')" class="w-full text-right px-4 py-3 bg-background-light hover:bg-surface/20 rounded-lg transition-colors duration-300 flex items-center justify-between">
+                                    <span class="text-text-primary">دليل التحضير للامتحانات</span>
+                                    <svg class="w-5 h-5 text-warning" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                                    </svg>
+                                </button>
+                                <button onclick="downloadResource('problem-solving-strategies')" class="w-full text-right px-4 py-3 bg-background-light hover:bg-surface/20 rounded-lg transition-colors duration-300 flex items-center justify-between">
+                                    <span class="text-text-primary">استراتيجيات حل المسائل</span>
+                                    <svg class="w-5 h-5 text-warning" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                                    </svg>
+                                </button>
+                                <button onclick="downloadResource('common-mistakes-guide')" class="w-full text-right px-4 py-3 bg-background-light hover:bg-surface/20 rounded-lg transition-colors duration-300 flex items-center justify-between">
+                                    <span class="text-text-primary">دليل الأخطاء الشائعة</span>
+                                    <svg class="w-5 h-5 text-warning" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reference Tables -->
+                <div class="card p-8">
+                    <div class="flex items-start space-x-4 space-x-reverse mb-6">
+                        <div class="flex-shrink-0 w-12 h-12 bg-error/10 rounded-lg flex items-center justify-center">
+                            <svg class="w-6 h-6 text-error" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-semibold mb-2">جداول المراجع</h3>
+                            <p class="text-text-secondary mb-4">جداول القيم والثوابت الرياضية والفيزيائية</p>
+                            <div class="space-y-2">
+                                <button onclick="downloadResource('trigonometric-values')" class="w-full text-right px-4 py-3 bg-background-light hover:bg-surface/20 rounded-lg transition-colors duration-300 flex items-center justify-between">
+                                    <span class="text-text-primary">جدول القيم المثلثية</span>
+                                    <svg class="w-5 h-5 text-error" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                                    </svg>
+                                </button>
+                                <button onclick="downloadResource('logarithm-tables')" class="w-full text-right px-4 py-3 bg-background-light hover:bg-surface/20 rounded-lg transition-colors duration-300 flex items-center justify-between">
+                                    <span class="text-text-primary">جداول اللوغاريتمات</span>
+                                    <svg class="w-5 h-5 text-error" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                                    </svg>
+                                </button>
+                                <button onclick="downloadResource('physical-constants')" class="w-full text-right px-4 py-3 bg-background-light hover:bg-surface/20 rounded-lg transition-colors duration-300 flex items-center justify-between">
+                                    <span class="text-text-primary">الثوابت الفيزيائية</span>
+                                    <svg class="w-5 h-5 text-error" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Calculator Section -->
+    <section class="section bg-background-light">
+        <div class="container-custom">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-headline font-bold mb-4">الآلة الحاسبة التفاعلية</h2>
+                <p class="text-xl text-text-secondary max-w-2xl mx-auto">
+                    حاسبة علمية متقدمة مع دعم كامل للعمليات المعقدة
+                </p>
+            </div>
+
+            <div class="max-w-2xl mx-auto">
+                <div class="card p-8">
+                    <!-- Calculator Display -->
+                    <div class="mb-6">
+                        <div class="bg-background rounded-lg p-6 mb-4">
+                            <div id="calc-display" class="text-3xl font-mono text-left text-text-primary min-h-[3rem] flex items-center">0</div>
+                        </div>
+                        <div class="text-sm text-text-muted text-left">
+                            <span id="calc-history"></span>
+                        </div>
+                    </div>
+
+                    <!-- Calculator Buttons -->
+                    <div class="grid grid-cols-4 gap-3">
+                        <!-- Row 1 -->
+                        <button onclick="calcClear()" class="btn btn-secondary py-4 text-lg font-semibold">C</button>
+                        <button onclick="calcBackspace()" class="btn btn-secondary py-4 text-lg font-semibold">⌫</button>
+                        <button onclick="calcOperation('/')" class="btn btn-secondary py-4 text-lg font-semibold">÷</button>
+                        <button onclick="calcOperation('*')" class="btn btn-secondary py-4 text-lg font-semibold">×</button>
+                        
+                        <!-- Row 2 -->
+                        <button onclick="calcNumber('7')" class="btn btn-outline py-4 text-lg font-semibold">7</button>
+                        <button onclick="calcNumber('8')" class="btn btn-outline py-4 text-lg font-semibold">8</button>
+                        <button onclick="calcNumber('9')" class="btn btn-outline py-4 text-lg font-semibold">9</button>
+                        <button onclick="calcOperation('-')" class="btn btn-secondary py-4 text-lg font-semibold">−</button>
+                        
+                        <!-- Row 3 -->
+                        <button onclick="calcNumber('4')" class="btn btn-outline py-4 text-lg font-semibold">4</button>
+                        <button onclick="calcNumber('5')" class="btn btn-outline py-4 text-lg font-semibold">5</button>
+                        <button onclick="calcNumber('6')" class="btn btn-outline py-4 text-lg font-semibold">6</button>
+                        <button onclick="calcOperation('+')" class="btn btn-secondary py-4 text-lg font-semibold">+</button>
+                        
+                        <!-- Row 4 -->
+                        <button onclick="calcNumber('1')" class="btn btn-outline py-4 text-lg font-semibold">1</button>
+                        <button onclick="calcNumber('2')" class="btn btn-outline py-4 text-lg font-semibold">2</button>
+                        <button onclick="calcNumber('3')" class="btn btn-outline py-4 text-lg font-semibold">3</button>
+                        <button onclick="calcEquals()" class="btn btn-primary py-4 text-lg font-semibold row-span-2">=</button>
+                        
+                        <!-- Row 5 -->
+                        <button onclick="calcNumber('0')" class="btn btn-outline py-4 text-lg font-semibold col-span-2">0</button>
+                        <button onclick="calcNumber('.')" class="btn btn-outline py-4 text-lg font-semibold">.</button>
+                    </div>
+
+                    <!-- Scientific Functions -->
+                    <div class="mt-6 grid grid-cols-4 gap-3">
+                        <button onclick="calcFunction('sin')" class="btn btn-ghost py-3 text-sm">sin</button>
+                        <button onclick="calcFunction('cos')" class="btn btn-ghost py-3 text-sm">cos</button>
+                        <button onclick="calcFunction('tan')" class="btn btn-ghost py-3 text-sm">tan</button>
+                        <button onclick="calcFunction('sqrt')" class="btn btn-ghost py-3 text-sm">√</button>
+                        <button onclick="calcFunction('log')" class="btn btn-ghost py-3 text-sm">log</button>
+                        <button onclick="calcFunction('ln')" class="btn btn-ghost py-3 text-sm">ln</button>
+                        <button onclick="calcFunction('pow')" class="btn btn-ghost py-3 text-sm">x²</button>
+                        <button onclick="calcFunction('pi')" class="btn btn-ghost py-3 text-sm">π</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academic Support Section -->
+    <section class="section">
+        <div class="container-custom">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-headline font-bold mb-4">الدعم الأكاديمي</h2>
+                <p class="text-xl text-text-secondary max-w-2xl mx-auto">
+                    موارد إضافية لتعزيز فهمك ومنع الأخطاء الشائعة
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Common Mistakes Guide -->
+                <div class="card p-8">
+                    <div class="w-12 h-12 bg-error/10 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-error" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">الأخطاء الشائعة</h3>
+                    <p class="text-text-secondary mb-4 leading-relaxed">
+                        تعرف على الأخطاء الأكثر شيوعاً وكيفية تجنبها في كل موضوع
+                    </p>
+                    <a href="javascript:void(0)" class="text-error font-semibold hover:text-error-400 transition-colors duration-300 flex items-center">
+                        <span>عرض الدليل</span>
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Problem-Solving Strategies -->
+                <div class="card p-8">
+                    <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">استراتيجيات الحل</h3>
+                    <p class="text-text-secondary mb-4 leading-relaxed">
+                        منهجيات منظمة لحل المسائل المعقدة بفعالية
+                    </p>
+                    <a href="javascript:void(0)" class="text-accent font-semibold hover:text-accent-400 transition-colors duration-300 flex items-center">
+                        <span>تعلم الاستراتيجيات</span>
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Study Tips -->
+                <div class="card p-8">
+                    <div class="w-12 h-12 bg-success/10 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">نصائح الدراسة</h3>
+                    <p class="text-text-secondary mb-4 leading-relaxed">
+                        تقنيات مثبتة علمياً لتحسين الاستيعاب والتذكر
+                    </p>
+                    <a href="javascript:void(0)" class="text-success font-semibold hover:text-success-400 transition-colors duration-300 flex items-center">
+                        <span>اكتشف النصائح</span>
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Usage Statistics Section -->
+    <section class="section bg-background-light">
+        <div class="container-custom">
+            <div class="card p-12 text-center">
+                <h2 class="text-4xl md:text-5xl font-headline font-bold mb-6">
+                    أدوات موثوقة<br/>
+                    <span class="gradient-text">للطلاب الجادين</span>
+                </h2>
+                <p class="text-xl text-text-secondary mb-12 leading-relaxed max-w-3xl mx-auto">
+                    انضم إلى آلاف الطلاب الذين يستخدمون أدواتنا يومياً لتحسين أدائهم الأكاديمي
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+                    <div>
+                        <div class="text-4xl font-bold text-accent mb-2">15,000+</div>
+                        <div class="text-text-secondary">عملية حسابية يومياً</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-success mb-2">8,500+</div>
+                        <div class="text-text-secondary">تنزيل شهري</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-warning mb-2">95%</div>
+                        <div class="text-text-secondary">معدل الدقة</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-error mb-2">24/7</div>
+                        <div class="text-text-secondary">متاح دائماً</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section">
+        <div class="container-custom">
+            <div class="card p-12 text-center relative overflow-hidden">
+                <div class="absolute inset-0 opacity-5">
+                    <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <pattern id="cta-pattern" width="60" height="60" patternUnits="userSpaceOnUse">
+                                <circle cx="30" cy="30" r="2" fill="currentColor"/>
+                            </pattern>
+                        </defs>
+                        <rect width="100%" height="100%" fill="url(#cta-pattern)"/>
+                    </svg>
+                </div>
+                <div class="relative z-10 max-w-3xl mx-auto">
+                    <h2 class="text-4xl md:text-5xl font-headline font-bold mb-6">
+                        ابدأ استخدام<br/>
+                        <span class="gradient-text">الأدوات الاحترافية</span>
+                    </h2>
+                    <p class="text-xl text-text-secondary mb-8 leading-relaxed">
+                        جميع الأدوات متاحة مجاناً ودون الحاجة للتسجيل. ابدأ الآن في تحسين أدائك الأكاديمي
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <button onclick="openCalculator()" class="btn btn-primary w-full sm:w-auto">
+                            <span>فتح الآلة الحاسبة</span>
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                            </svg>
+                        </button>
+                        <a href="homepage.html" class="btn btn-outline w-full sm:w-auto">
+                            <span>العودة للرئيسية</span>
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-background-light border-t border-surface/30 py-12">
+        <div class="container-custom">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- Brand -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center space-x-3 space-x-reverse mb-4">
+                        <svg class="w-10 h-10" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="40" height="40" rx="8" fill="url(#footer-logo-gradient)"/>
+                            <text x="20" y="28" font-family="Inter, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC" text-anchor="middle">AG</text>
+                            <defs>
+                                <linearGradient id="footer-logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#3B82F6"/>
+                                    <stop offset="1" stop-color="#2563EB"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <div>
+                            <h3 class="text-xl font-headline font-bold">Math Companion Pro</h3>
+                            <p class="text-sm text-text-muted">أدوات احترافية للطلاب الجادين</p>
+                        </div>
+                    </div>
+                    <p class="text-text-secondary leading-relaxed mb-4">
+                        مجموعة شاملة من الأدوات الأكاديمية المصممة لدعم رحلتك التعليمية. جميع الأدوات متاحة مجاناً ودون الحاجة للتسجيل.
+                    </p>
+                    <p class="text-sm text-text-muted">
+                        © 2025 Math Companion Pro. جميع الحقوق محفوظة.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">روابط سريعة</h4>
+                    <ul class="space-y-2">
+                        <li><a href="homepage.html" class="text-text-secondary hover:text-accent transition-colors duration-300">الرئيسية</a></li>
+                        <li><a href="complex_numbers.html" class="text-text-secondary hover:text-accent transition-colors duration-300">الأعداد المركبة</a></li>
+                        <li><a href="professional_insights.html" class="text-text-secondary hover:text-accent transition-colors duration-300">رؤى مهنية</a></li>
+                        <li><a href="physics_integration.html" class="text-text-secondary hover:text-accent transition-colors duration-300">الفيزياء</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">الموارد</h4>
+                    <ul class="space-y-2">
+                        <li><a href="study_tools.html" class="text-text-secondary hover:text-accent transition-colors duration-300">أدوات الدراسة</a></li>
+                        <li><a href="about.html" class="text-text-secondary hover:text-accent transition-colors duration-300">حول المنصة</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-accent transition-colors duration-300">مكتبة الموارد</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-accent transition-colors duration-300">الدعم الأكاديمي</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-surface/30 pt-8 text-center">
+                <p class="text-text-muted text-sm">
+                    تم التطوير بواسطة <span class="text-accent font-semibold">A.G.</span> - تلميذ رياضيات في ثانوية الامام مالك
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Calculator JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Calculator State
+        let calcDisplay = '0';
+        let calcHistory = '';
+        let calcOperator = null;
+        let calcPrevValue = null;
+        let calcWaitingForOperand = false;
+
+        function updateCalcDisplay() {
+            document.getElementById('calc-display').textContent = calcDisplay;
+            document.getElementById('calc-history').textContent = calcHistory;
+        }
+
+        function calcNumber(num) {
+            if (calcWaitingForOperand) {
+                calcDisplay = num;
+                calcWaitingForOperand = false;
+            } else {
+                calcDisplay = calcDisplay === '0' ? num : calcDisplay + num;
+            }
+            updateCalcDisplay();
+        }
+
+        function calcOperation(op) {
+            const inputValue = parseFloat(calcDisplay);
+            
+            if (calcPrevValue === null) {
+                calcPrevValue = inputValue;
+            } else if (calcOperator) {
+                const result = performCalculation(calcPrevValue, inputValue, calcOperator);
+                calcDisplay = String(result);
+                calcPrevValue = result;
+            }
+            
+            calcWaitingForOperand = true;
+            calcOperator = op;
+            calcHistory = `${calcPrevValue} ${op}`;
+            updateCalcDisplay();
+        }
+
+        function calcEquals() {
+            const inputValue = parseFloat(calcDisplay);
+            
+            if (calcOperator && calcPrevValue !== null) {
+                const result = performCalculation(calcPrevValue, inputValue, calcOperator);
+                calcDisplay = String(result);
+                calcHistory = `${calcPrevValue} ${calcOperator} ${inputValue} =`;
+                calcPrevValue = null;
+                calcOperator = null;
+                calcWaitingForOperand = true;
+                updateCalcDisplay();
+            }
+        }
+
+        function performCalculation(prev, current, operator) {
+            switch (operator) {
+                case '+': return prev + current;
+                case '-': return prev - current;
+                case '*': return prev * current;
+                case '/': return prev / current;
+                default: return current;
+            }
+        }
+
+        function calcClear() {
+            calcDisplay = '0';
+            calcHistory = '';
+            calcOperator = null;
+            calcPrevValue = null;
+            calcWaitingForOperand = false;
+            updateCalcDisplay();
+        }
+
+        function calcBackspace() {
+            calcDisplay = calcDisplay.length > 1 ? calcDisplay.slice(0, -1) : '0';
+            updateCalcDisplay();
+        }
+
+        function calcFunction(func) {
+            const value = parseFloat(calcDisplay);
+            let result;
+            
+            switch (func) {
+                case 'sin':
+                    result = Math.sin(value * Math.PI / 180);
+                    break;
+                case 'cos':
+                    result = Math.cos(value * Math.PI / 180);
+                    break;
+                case 'tan':
+                    result = Math.tan(value * Math.PI / 180);
+                    break;
+                case 'sqrt':
+                    result = Math.sqrt(value);
+                    break;
+                case 'log':
+                    result = Math.log10(value);
+                    break;
+                case 'ln':
+                    result = Math.log(value);
+                    break;
+                case 'pow':
+                    result = Math.pow(value, 2);
+                    break;
+                case 'pi':
+                    result = Math.PI;
+                    break;
+                default:
+                    result = value;
+            }
+            
+            calcDisplay = String(result);
+            calcHistory = `${func}(${value})`;
+            calcWaitingForOperand = true;
+            updateCalcDisplay();
+        }
+
+        // Tool Functions
+        function openCalculator() {
+            document.querySelector('.section.bg-background-light').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function openFormulaReference() {
+            alert('مرجع الصيغ سيكون متاحاً قريباً. يتم العمل على تطوير مكتبة شاملة لجميع الصيغ الرياضية.');
+        }
+
+        function openProofChecker() {
+            alert('فاحص البراهين سيكون متاحاً قريباً. أداة ذكية للتحقق من صحة البراهين الرياضية.');
+        }
+
+        function openUnitConverter() {
+            alert('محول الوحدات سيكون متاحاً قريباً. تحويل سريع ودقيق بين مختلف وحدات القياس.');
+        }
+
+        function openGraphingTool() {
+            alert('أداة الرسم البياني ستكون متاحة قريباً. رسم الدوال والمعادلات بشكل تفاعلي.');
+        }
+
+        function openStudyTimer() {
+            alert('مؤقت الدراسة سيكون متاحاً قريباً. نظام بومودورو للدراسة الفعالة.');
+        }
+
+        function downloadResource(resourceId) {
+            alert(`جاري تحضير تنزيل: ${resourceId}\n\nالموارد القابلة للتنزيل ستكون متاحة قريباً.`);
+        }
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>
