@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Companion Pro - خارطة الطريق BAC 2027</title>
+    <link rel="stylesheet" href="../css/tailwind.css">
+</head>
+<body class="bg-background text-text-primary">
+    <header class="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-surface/30">
+        <nav class="container-custom">
+            <div class="flex items-center justify-between h-16">
+                 <div class="flex items-center space-x-3 space-x-reverse">
+                    <h1 class="text-xl font-headline font-bold text-text-primary">Math Companion Pro</h1>
+                </div>
+                <div class="hidden md:flex items-center space-x-8 space-x-reverse">
+                    <a href="homepage.html" class="text-text-secondary hover:text-accent transition-colors duration-300">الرئيسية</a>
+                    <a href="roadmap.html" class="text-accent font-semibold transition-colors duration-300">خارطة الطريق</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="pt-32 pb-20">
+        <div class="container-custom">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">خارطة طريق BAC 2027</h1>
+                <p class="text-xl text-text-secondary">خطتك الدراسية الشاملة للتميز في الرياضيات والفيزياء</p>
+            </div>
+
+            <div class="flex justify-end mb-6">
+                <button id="downloadPdfBtn" class="btn btn-primary">
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                    تحميل الخارطة PDF
+                </button>
+            </div>
+
+            <div class="bg-secondary/20 rounded-xl border border-surface/30 overflow-hidden" id="roadmapContent">
+                <table class="data-table w-full text-right">
+                    <thead>
+                        <tr class="bg-secondary/50">
+                            <th class="p-4 text-accent">الشهر</th>
+                            <th class="p-4 text-accent">المحور الدراسي</th>
+                            <th class="p-4 text-accent">الأهداف الأساسية</th>
+                            <th class="p-4 text-accent">نصائح</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-surface/30 hover:bg-surface/10">
+                            <td class="p-4 font-bold">سبتمبر - أكتوبر</td>
+                            <td class="p-4">الدوال العددية</td>
+                            <td class="p-4">دراسة التغيرات، النهايات، الاستمرارية</td>
+                            <td class="p-4 text-sm text-text-muted">ركز على فهم المنحنيات البيانية</td>
+                        </tr>
+                        <tr class="border-b border-surface/30 hover:bg-surface/10">
+                            <td class="p-4 font-bold">نوفمبر</td>
+                            <td class="p-4">الاشتقاقية</td>
+                            <td class="p-4">حساب المشتقات، التطبيقات الفيزيائية</td>
+                            <td class="p-4 text-sm text-text-muted">حل تمارين الكتاب المدرسي</td>
+                        </tr>
+                        <tr class="border-b border-surface/30 hover:bg-surface/10">
+                            <td class="p-4 font-bold">ديسمبر</td>
+                            <td class="p-4">المتتاليات العددية</td>
+                            <td class="p-4">الحسابية، الهندسية، البرهان بالتراجع</td>
+                            <td class="p-4 text-sm text-text-muted">راجع المكتسبات القبلية</td>
+                        </tr>
+                         <tr class="border-b border-surface/30 hover:bg-surface/10">
+                            <td class="p-4 font-bold">جانفي - فيفري</td>
+                            <td class="p-4">الدوال الأسية واللوغاريتمية</td>
+                            <td class="p-4">الخواص الجبرية، المعادلات التفاضلية</td>
+                            <td class="p-4 text-sm text-text-muted">محور أساسي في البكالوريا</td>
+                        </tr>
+                         <tr class="border-b border-surface/30 hover:bg-surface/10">
+                            <td class="p-4 font-bold">مارس</td>
+                            <td class="p-4">الأعداد المركبة</td>
+                            <td class="p-4">الشكل الجبري، المثلثي، التحويلات النقطية</td>
+                            <td class="p-4 text-sm text-text-muted">اربط الجبر بالهندسة</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <script type="module" src="../js/roadmap.js"></script>
+</body>
+</html>

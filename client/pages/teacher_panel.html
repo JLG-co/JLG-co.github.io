@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Companion Pro - لوحة المعلم</title>
+    <link rel="stylesheet" href="../css/tailwind.css">
+</head>
+<body class="bg-background text-text-primary">
+    <header class="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-surface/30">
+        <nav class="container-custom">
+            <div class="flex items-center justify-between h-16">
+                 <h1 class="text-xl font-bold">لوحة إدارة المعلم</h1>
+                 <a href="homepage.html" class="btn btn-ghost text-sm">العودة للرئيسية</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="pt-32 pb-20">
+        <div class="container-custom max-w-4xl">
+            <div class="bg-secondary/20 p-8 rounded-xl border border-surface/30 mb-12">
+                <h2 class="text-2xl font-bold mb-6">رفع محتوى جديد</h2>
+                <form id="uploadForm" class="space-y-6">
+                    <div class="form-group">
+                        <label class="form-label">عنوان الدرس / التمرين</label>
+                        <input type="text" id="resourceTitle" class="input" placeholder="مثال: سلسلة تمارين الدوال الأسية">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">نوع الملف</label>
+                        <select id="resourceType" class="input bg-secondary">
+                            <option value="exercise">تمرين</option>
+                            <option value="solution">حل مفصل</option>
+                            <option value="note">ملخص درس</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">الملف (PDF)</label>
+                        <div class="border-2 border-dashed border-surface rounded-lg p-8 text-center hover:bg-surface/10 transition cursor-pointer">
+                            <input type="file" id="fileInput" class="hidden" accept=".pdf">
+                            <label for="fileInput" class="cursor-pointer">
+                                <span class="text-accent block mb-2">اضغط لرفع ملف</span>
+                                <span class="text-sm text-text-muted">PDF فقط (max 5MB)</span>
+                            </label>
+                            <div id="fileName" class="mt-2 text-success hidden"></div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-full">نشر المحتوى</button>
+                </form>
+            </div>
+
+            <div class="bg-background p-8 rounded-xl border border-surface/30">
+                <h2 class="text-2xl font-bold mb-6">المحتوى المنشور</h2>
+                <div id="resourcesList" class="space-y-4">
+                    <!-- Resources will be added here dynamically -->
+                    <div class="p-4 border border-surface rounded-lg flex justify-between items-center">
+                        <div>
+                            <h4 class="font-bold">سلسلة تمارين الأعداد المركبة</h4>
+                            <span class="badge badge-info mt-1">تمرين</span>
+                            <span class="text-xs text-text-muted block mt-1">تم النشر: 2024-10-15</span>
+                        </div>
+                        <button class="btn btn-outline text-sm">حذف</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script type="module" src="../js/teacher-panel.js"></script>
+</body>
+</html>

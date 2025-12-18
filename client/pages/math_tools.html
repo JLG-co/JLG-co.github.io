@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Companion Pro - الأدوات الرياضية</title>
+    <link rel="stylesheet" href="../css/tailwind.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="bg-background text-text-primary">
+    <!-- Navigation Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-surface/30">
+        <nav class="container-custom">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3 space-x-reverse">
+                    <svg class="w-10 h-10" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="40" height="40" rx="8" fill="url(#logo-gradient)"/>
+                        <text x="20" y="28" font-family="Inter, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC" text-anchor="middle">AG</text>
+                        <defs>
+                            <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#3B82F6"/>
+                                <stop offset="1" stop-color="#2563EB"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <div>
+                        <h1 class="text-xl font-headline font-bold text-text-primary">Math Companion Pro</h1>
+                        <p class="text-xs text-text-muted">الدقة الرياضية تبني الدقة في الحياة</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8 space-x-reverse">
+                    <a href="homepage.html" class="text-text-secondary hover:text-accent transition-colors duration-300">الرئيسية</a>
+                    <a href="math_tools.html" class="text-accent font-semibold transition-colors duration-300">الأدوات الرياضية</a>
+                    <a href="roadmap.html" class="text-text-secondary hover:text-accent transition-colors duration-300">خارطة الطريق</a>
+                    <a href="gamification.html" class="text-text-secondary hover:text-accent transition-colors duration-300">لوحة التحكم</a>
+                </div>
+
+                 <div class="hidden md:flex items-center space-x-4 space-x-reverse">
+                    <a href="teacher_panel.html" class="btn btn-outline py-2 px-4 text-sm">لوحة المعلم</a>
+                    <a href="login.html" class="btn btn-primary py-2 px-4 text-sm">تسجيل الدخول</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <section class="pt-32 pb-20">
+        <div class="container-custom">
+            <h1 class="text-4xl font-headline font-bold mb-8 text-center">الأدوات الرياضية التفاعلية</h1>
+
+            <!-- Tabs -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12 border-b border-surface/30 pb-4">
+                <button class="btn btn-outline active-tab" onclick="switchTab('grapher')">راسم المنحنيات</button>
+                <button class="btn btn-ghost" onclick="switchTab('solver')">حل المعادلات</button>
+                <button class="btn btn-ghost" onclick="switchTab('derivative')">المشتقات</button>
+                <button class="btn btn-ghost" onclick="switchTab('limits')">النهايات</button>
+                <button class="btn btn-ghost" onclick="switchTab('vectors')">الأشعة</button>
+                <button class="btn btn-ghost" onclick="switchTab('polynomial')">كثيرات الحدود</button>
+                <button class="btn btn-ghost" onclick="switchTab('geometry')">الهندسة</button>
+            </div>
+
+            <!-- Grapher Tool -->
+            <div id="grapher" class="tool-content block">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <div class="col-span-1 bg-secondary/30 p-6 rounded-xl border border-surface/30">
+                        <h3 class="text-xl font-bold mb-4">إدخال الدالة</h3>
+                        <div class="form-group mb-4">
+                            <label class="form-label">الدالة f(x) =</label>
+                            <input type="text" id="graphFunction" class="input" placeholder="x^2 + 2*x + 1">
+                        </div>
+                        <div class="flex gap-2 mb-4">
+                            <div class="form-group flex-1">
+                                <label class="form-label">من x</label>
+                                <input type="number" id="xMin" class="input" value="-10">
+                            </div>
+                            <div class="form-group flex-1">
+                                <label class="form-label">إلى x</label>
+                                <input type="number" id="xMax" class="input" value="10">
+                            </div>
+                        </div>
+                        <button id="plotBtn" class="btn btn-primary w-full">رسم المنحنى</button>
+                    </div>
+                    <div class="col-span-2 bg-white rounded-xl p-4 min-h-[400px]">
+                        <canvas id="graphCanvas"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Solver Tool -->
+            <div id="solver" class="tool-content hidden">
+                <div class="max-w-2xl mx-auto bg-secondary/30 p-8 rounded-xl border border-surface/30">
+                    <h3 class="text-2xl font-bold mb-6 text-center">حل المعادلات المتقدم</h3>
+                    <div class="form-group mb-6">
+                        <label class="form-label">المعادلة</label>
+                        <input type="text" id="equationInput" class="input text-lg" placeholder="x^2 - 4 = 0">
+                    </div>
+                    <button id="solveBtn" class="btn btn-primary w-full mb-6">حل المعادلة</button>
+                    <div id="solverResult" class="bg-background p-6 rounded-lg border border-surface min-h-[100px] text-center text-lg font-mono hidden"></div>
+                </div>
+            </div>
+
+            <!-- Derivative Tool -->
+            <div id="derivative" class="tool-content hidden">
+                <div class="max-w-2xl mx-auto bg-secondary/30 p-8 rounded-xl border border-surface/30">
+                    <h3 class="text-2xl font-bold mb-6 text-center">حاسبة المشتقات مع الخطوات</h3>
+                    <div class="form-group mb-6">
+                        <label class="form-label">الدالة f(x) =</label>
+                        <input type="text" id="derivativeInput" class="input text-lg" placeholder="x^3 + 2*x">
+                    </div>
+                    <button id="deriveBtn" class="btn btn-accent w-full mb-6">احسب المشتقة</button>
+                    <div id="derivativeResult" class="bg-background p-6 rounded-lg border border-surface min-h-[100px] text-center text-lg font-mono hidden"></div>
+                </div>
+            </div>
+
+            <!-- Limits Tool -->
+            <div id="limits" class="tool-content hidden">
+                <div class="max-w-2xl mx-auto bg-secondary/30 p-8 rounded-xl border border-surface/30">
+                    <h3 class="text-2xl font-bold mb-6 text-center">حاسبة النهايات</h3>
+                    <div class="form-group mb-4">
+                        <label class="form-label">الدالة f(x) =</label>
+                        <input type="text" id="limitInput" class="input text-lg" placeholder="sin(x)/x">
+                    </div>
+                    <div class="form-group mb-6">
+                        <label class="form-label">عندما x يؤول إلى</label>
+                        <input type="number" id="limitPoint" class="input text-lg" placeholder="0">
+                    </div>
+                    <button id="limitBtn" class="btn btn-info w-full mb-6">احسب النهاية</button>
+                    <div id="limitResult" class="bg-background p-6 rounded-lg border border-surface min-h-[100px] text-center text-lg font-mono hidden"></div>
+                </div>
+            </div>
+
+            <!-- Vector Tool -->
+            <div id="vectors" class="tool-content hidden">
+                <div class="max-w-2xl mx-auto bg-secondary/30 p-8 rounded-xl border border-surface/30">
+                    <h3 class="text-2xl font-bold mb-6 text-center">حاسبة الزوايا بين الأشعة</h3>
+                    <div class="grid grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <h4 class="mb-2 font-bold">الشعاع U</h4>
+                            <input type="number" id="ux" class="input mb-2" placeholder="x">
+                            <input type="number" id="uy" class="input mb-2" placeholder="y">
+                            <input type="number" id="uz" class="input" placeholder="z (اختياري)">
+                        </div>
+                        <div>
+                            <h4 class="mb-2 font-bold">الشعاع V</h4>
+                            <input type="number" id="vx" class="input mb-2" placeholder="x">
+                            <input type="number" id="vy" class="input mb-2" placeholder="y">
+                            <input type="number" id="vz" class="input" placeholder="z (اختياري)">
+                        </div>
+                    </div>
+                    <button id="vectorBtn" class="btn btn-accent w-full mb-6">احسب الزاوية</button>
+                    <div id="vectorResult" class="bg-background p-6 rounded-lg border border-surface min-h-[100px] text-center text-lg font-mono hidden"></div>
+                </div>
+            </div>
+
+             <!-- Polynomial Tool -->
+            <div id="polynomial" class="tool-content hidden">
+                <div class="max-w-2xl mx-auto bg-secondary/30 p-8 rounded-xl border border-surface/30">
+                    <h3 class="text-2xl font-bold mb-6 text-center">تحليل كثيرات الحدود</h3>
+                    <div class="form-group mb-6">
+                        <label class="form-label">كثير الحدود P(x) =</label>
+                        <input type="text" id="polyInput" class="input text-lg" placeholder="x^2 - 5x + 6">
+                    </div>
+                    <button id="factorBtn" class="btn btn-success w-full mb-6">تحليل</button>
+                    <div id="polyResult" class="bg-background p-6 rounded-lg border border-surface min-h-[100px] text-center text-lg font-mono hidden"></div>
+                </div>
+            </div>
+
+             <!-- Geometry Tool -->
+            <div id="geometry" class="tool-content hidden">
+                <div class="max-w-2xl mx-auto bg-secondary/30 p-8 rounded-xl border border-surface/30">
+                    <h3 class="text-2xl font-bold mb-6 text-center">حل المثلثات</h3>
+                     <div class="grid grid-cols-3 gap-4 mb-4">
+                        <input type="number" id="sideA" class="input" placeholder="الضلع أ">
+                        <input type="number" id="sideB" class="input" placeholder="الضلع ب">
+                        <input type="number" id="sideC" class="input" placeholder="الضلع ج">
+                    </div>
+                    <button id="geoBtn" class="btn btn-warning w-full mb-6">احسب الزوايا والمساحة</button>
+                    <div id="geoResult" class="bg-background p-6 rounded-lg border border-surface min-h-[100px] hidden"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-background-light border-t border-surface/30 py-12">
+        <div class="container-custom text-center">
+             <p class="text-text-muted">© 2025 Math Companion Pro. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="../js/math-tools.js"></script>
+    <script>
+        function switchTab(tabId) {
+            document.querySelectorAll('.tool-content').forEach(el => el.classList.add('hidden'));
+            document.getElementById(tabId).classList.remove('hidden');
+            
+            document.querySelectorAll('.active-tab').forEach(el => {
+                el.classList.remove('btn-outline', 'active-tab');
+                el.classList.add('btn-ghost');
+            });
+            event.target.classList.remove('btn-ghost');
+            event.target.classList.add('btn-outline', 'active-tab');
+        }
+    </script>
+</body>
+</html>
