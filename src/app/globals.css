@@ -1,0 +1,167 @@
+/* Updated: 2025-12-19T03:23:43.201Z */
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-background: #020617;
+  --color-foreground: #f8fafc;
+
+  --color-card: #0f172a80;
+  --color-card-foreground: #f8fafc;
+
+  --color-popover: #0f172a;
+  --color-popover-foreground: #f8fafc;
+
+  --color-primary: #00a3ff;
+  --color-primary-foreground: #ffffff;
+
+  --color-secondary: #1e293b;
+  --color-secondary-foreground: #f8fafc;
+
+  --color-muted: #1e293b;
+  --color-muted-foreground: #94a3b8;
+
+  --color-accent: #00a3ff33;
+  --color-accent-foreground: #00a3ff;
+
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: #fafafa;
+
+  --color-border: #1e293b;
+  --color-input: #1e293b;
+  --color-ring: #00a3ff;
+
+  --color-chart-1: #00a3ff;
+  --color-chart-2: #3b82f6;
+  --color-chart-3: #60a5fa;
+  --color-chart-4: #93c5fd;
+  --color-chart-5: #bfdbfe;
+
+  --color-sidebar: #020617;
+  --color-sidebar-foreground: #94a3b8;
+  --color-sidebar-primary: #00a3ff;
+  --color-sidebar-primary-foreground: #ffffff;
+  --color-sidebar-accent: #1e293b;
+  --color-sidebar-accent-foreground: #f8fafc;
+  --color-sidebar-border: #1e293b;
+  --color-sidebar-ring: #00a3ff;
+
+  --font-sans: "Readex Pro", "Tajawal", ui-sans-serif, system-ui, sans-serif;
+  
+  --radius-lg: 0.5rem;
+  --radius-md: calc(0.5rem - 2px);
+  --radius-sm: calc(0.5rem - 4px);
+
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: #1e293b;
+  }
+
+  :root {
+    --background: #020617;
+    --foreground: #f8fafc;
+    --card: #0f172a80;
+    --card-foreground: #f8fafc;
+    --popover: #0f172a;
+    --popover-foreground: #f8fafc;
+    --primary: #00a3ff;
+    --primary-foreground: #ffffff;
+    --secondary: #1e293b;
+    --secondary-foreground: #f8fafc;
+    --muted: #1e293b;
+    --muted-foreground: #94a3b8;
+    --accent: #00a3ff33;
+    --accent-foreground: #00a3ff;
+    --destructive: #ef4444;
+    --destructive-foreground: #fafafa;
+    --border: #1e293b;
+    --input: #1e293b;
+    --ring: #00a3ff;
+    --radius: 0.5rem;
+    --sidebar-background: #020617;
+    --sidebar-foreground: #94a3b8;
+    --sidebar-primary: #00a3ff;
+    --sidebar-primary-foreground: #ffffff;
+    --sidebar-accent: #1e293b;
+    --sidebar-accent-foreground: #f8fafc;
+    --sidebar-border: #1e293b;
+    --sidebar-ring: #00a3ff;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    direction: rtl;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    background-image: 
+      linear-gradient(to right, rgba(148, 163, 184, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(148, 163, 184, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    max-width: 1152px;
+  }
+
+  .glow-text-primary {
+    text-shadow: 0 0 15px rgba(0, 163, 255, 0.6);
+  }
+
+  .glow-border-primary {
+    box-shadow: 0 0 10px rgba(0, 163, 255, 0.4);
+  }
+
+  .glass-panel {
+    background-color: rgba(15, 23, 42, 0.3);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--border);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
